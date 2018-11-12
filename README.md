@@ -55,4 +55,4 @@
 ## Murmur by me
 
 * The origin version (pdflatex) cannot show my name. I feel really sad ;(
-* If there are any bugs (format or whatever), feel free to tell me: r05942066@ntu.edu.tw
+* If there are any bugs (format or whatever), feel free to tell me: r05942066[AT]ntu.edu.tw
