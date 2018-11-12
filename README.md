@@ -1,7 +1,7 @@
 # National Taiwan University Master Thesis - **xelatex** version
 
 * origin version from: https://github.com/ychiaoli18/thesis.git
-* This is for xelatex/xzeCJK version
+* This is for xelatex/xeCJK version
 * Also fixed one typo in College name : replace "Enginnering" with "Engineering"
 
 ## Usage
