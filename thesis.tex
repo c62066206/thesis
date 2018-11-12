@@ -10,13 +10,20 @@
 % 否則毋須修改本檔內容
 % 論文撰寫，請修改以 my_  開頭檔名的各檔案
 
-\usepackage{CJKutf8}  %%% ZZZ %%% macro for Chinese/Japanese/Korean processing
-\usepackage{CJKnumb} %%% ZZZ %%% for Chinese numbering capability
+\usepackage{xeCJK}
+\usepackage{fontspec}
 \usepackage[nospace]{cite}  % for smart citation
 %\usepackage{geometry}  % for easy margin settings
 \usepackage{ntuthesis}
 \usepackage{multirow,multicol,rotating}
 
+\setCJKmainfont{GenRyuMinTW-Regular.ttf}
+\setmainfont{Times New Roman}
+
+\setlength{\parindent}{2em}
+
+\usepackage{CJKutf8} %%% ZZZ %%% macro for Chinese/Japanese/Korean processing
+\usepackage{CJKnumb} %%% ZZZ %%% for Chinese numbering capability
 %
 % margins setting
 %\geometry{verbose,a4paper,tmargin=3.5cm,bmargin=2cm,lmargin=4cm,rmargin=2cm}
@@ -28,33 +35,33 @@
 % 這裡作自動判斷
 % 參考自
 % http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ifpdf
-\newcommand\mydvipdfmxflow{dvipdfmx}
-\newcommand\mypdftexflow{pdftex}
-\ifx\pdfoutput\undefined
-  % not running pdftex
-  \usepackage[dvipdfm]{graphicx}
-  \newcommand\myworkflow{dvipdfmx}  % set the flag for hyperref
-\else
-  \ifx\pdfoutput\relax
-    % not running pdftex
-    \usepackage[dvipdfm]{graphicx}
-    \newcommand\myworkflow{dvipdfmx}  % set the flag
-  \else
-    % running pdftex, with...
-    \ifnum\pdfoutput>0
-      % ... PDF output
-      %\usepackage[pdftex]{graphicx}
-      \newcommand\myworkflow{pdftex}  % set the flag
-    \else
-      %...DVI output
-      \usepackage[dvipdfm]{graphicx}
-      \newcommand\myworkflow{dvipdfmx}  % set the flag
-    \fi
-  \fi
-\fi
+%\newcommand\mydvipdfmxflow{dvipdfmx}
+%\newcommand\mypdftexflow{pdftex}
+%\ifx\pdfoutput\undefined
+%  % not running pdftex
+%  \usepackage[dvipdfm]{graphicx}
+%  \newcommand\myworkflow{dvipdfmx}  % set the flag for hyperref
+%\else
+%  \ifx\pdfoutput\relax
+%    % not running pdftex
+%    \usepackage[dvipdfm]{graphicx}
+%    \newcommand\myworkflow{dvipdfmx}  % set the flag
+%  \else
+%    % running pdftex, with...
+%    \ifnum\pdfoutput>0
+%      % ... PDF output
+%      %\usepackage[pdftex]{graphicx}
+%      \newcommand\myworkflow{pdftex}  % set the flag
+%    \else
+%      %...DVI output
+%      \usepackage[dvipdfm]{graphicx}
+%      \newcommand\myworkflow{dvipdfmx}  % set the flag
+%    \fi
+%  \fi
+%\fi
 
 % 增強功能型頁楣 / 頁腳套件
-\usepackage{fancyhdr}  % 借用此套件來擺放浮水印 
+\usepackage{fancyhdr}  % 借用此套件來擺放浮水印
 % (佔用了 central header)
 % 不需要浮水印的使用者仍可利用此套件，產生所需的 header, footer
 %
@@ -66,7 +73,7 @@
 
 % 如果不需要任何浮水印，則請把下列介於 >>> 與 <<< 之間
 % 的文字行關掉 (行首加上百分號)
-%% 浮水印 >>> 
+%% 浮水印 >>>
 %\input{yzu_watermark.tex}
 %% <<< 浮水印
 
@@ -85,7 +92,7 @@
 \usepackage{subfig}
 \usepackage{tabularx}
 \usepackage{url}
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[usenames]{xcolor}
 \usepackage{pgf}
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata,positioning}
@@ -99,9 +106,9 @@
 \renewcommand{\authorEnName}{Yun-Chiao Li}  %作者英文姓名
 \renewcommand{\authorStudentID}{R01942062}  %作者學號
 \renewcommand{\advisorZhName}{李琳山}  %指導教授中文姓名
-\renewcommand{\advisorEnName}{Lin-Shan Lee}  %指導教授英文姓名
+\renewcommand{\advisorEnName}{Lin-shan Lee}  %指導教授英文姓名
 \renewcommand{\zhCollegeName}{電機資訊學院}  %學院中文名稱
-\renewcommand{\enCollegeName}{College of Electrical Enginnering and Computer Science}  %學院英文名稱
+\renewcommand{\enCollegeName}{College of Electrical Engineering and Computer Science}  %學院英文名稱
 \renewcommand{\zhDepartmentName}{電信工程學研究所}  %系所中文名稱
 \renewcommand{\enDepartmentName}{Graduate Institute of Communication Engineering}  %系所英文名稱
 \renewcommand{\rocYear}{一百零三}  %中華民國紀年年份
@@ -137,11 +144,11 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 
 % hyperlinkable table of contents
 % 章節目錄、圖表超連結
-\ifx\myworkflow\mydvipdfmxflow
-	\usepackage[dvipdfmx, debug, colorlinks, linkcolor=black, citecolor=black, urlcolor=black, unicode]{hyperref}
-\else
-	\usepackage[pdftex, debug, colorlinks, linkcolor=black, citecolor=black, urlcolor=black, unicode]{hyperref}	
-\fi
+%\ifx\myworkflow\mydvipdfmxflow
+%	\usepackage[dvipdfmx, debug, colorlinks, linkcolor=black, citecolor=black, urlcolor=black, unicode]{hyperref}
+%\else
+%	\usepackage[pdftex, debug, colorlinks, linkcolor=black, citecolor=black, urlcolor=black, unicode]{hyperref}
+%\fi
 
 % if hyperref is not used (e.g., in LyX application)
 % define dummy \phantomsection for those occurences
@@ -154,8 +161,8 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 \usepackage{algorithm}
 \usepackage{algorithmic}
 %%%% 以上為所有套件
-%%%% 
-%%%% 
+%%%%
+%%%%
 
 % global page layout
 %\newcommand{\mybaselinestretch}{1.5}  %行距 1.5 倍 + 20%, (約為 double space)
@@ -168,22 +175,18 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \begin{document}
-\begin{CJK}{UTF8}{bsmi}   %%% ZZZ %%%  <<< 在這裡更改預設中文字型、編碼
-% 編碼：UTF8, Bg5, ...
-% 中文字型名稱：TeXLive 安裝有一套明體字 bsmi, 楷書與其他字型視你的 LaTeX CJK 系統裝設情況而定
-
 % 針對 latex + dvipdfmx 工作流程在 hyperref 套件的影響下，圖檔的辨識力退化
 % 所作的權宜措施。可能是因為 TeXLive2007 hyperref 裏的
 % 客製 graphicx / dvipdfmx 的設定檔不夠新
-\ifx\myworkflow\mydvipdfmxflow
-	\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
-	\DeclareGraphicsRule{.pdf}{eps}{.bb}{}
-	\DeclareGraphicsRule{.png}{eps}{.bb}{}
-	\DeclareGraphicsRule{.jpg}{eps}{.bb}{}
-\fi
+%\ifx\myworkflow\mydvipdfmxflow
+%	\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+%	\DeclareGraphicsRule{.pdf}{eps}{.bb}{}
+%	\DeclareGraphicsRule{.png}{eps}{.bb}{}
+%	\DeclareGraphicsRule{.jpg}{eps}{.bb}{}
+%\fi
 
 % global CJK setting
-\CJKindent  %%% ZZZ %%%  段首內縮兩格
+\indent  %%% ZZZ %%%  段首內縮兩格
 
 % 載入中文名詞的定義：例如，Figure -->「圖」, Chapter -->「第 x 章」
 \input{ntu_definitions.tex}
@@ -219,7 +222,5 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 
 \input{thesis_backpages.tex}
 
-\clearpage % to make sure all CJK characters are processed
-\end{CJK}  %%% ZZZ %%%
-\end{document} 
- 
+\end{document}
+
