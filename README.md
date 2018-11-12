@@ -13,6 +13,7 @@
 * `cd thesis`
 * `make`
 * Make sure there are no error messages.
+* You can see the output file in `dist/`
 * Now, you can start to write your thesis
 
 
