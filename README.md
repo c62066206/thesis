@@ -7,7 +7,7 @@
 ## Usage
 
 * First, you need to install xelatex.
-* Then, type
+* Then, download ZIP in this page, or type:
 * `git clone https://github.com/c62066206/thesis.git`
 * `cd thesis`
 * `make`
