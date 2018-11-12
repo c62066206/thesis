@@ -1,7 +1,8 @@
-# National Taiwan University Master Thesis - **xelatex** version
+# National Taiwan University Master Thesis - **xelatex**
 
+* 國立臺灣大學碩士論文(台大碩論)
 * origin version from: https://github.com/ychiaoli18/thesis.git
-* This is for xelatex/xeCJK version
+* This is NTU master thesis for xelatex/xeCJK version 
 * Also fixed one typo in College name : replace "Enginnering" with "Engineering"
 
 ## Usage
