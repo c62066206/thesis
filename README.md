@@ -7,7 +7,11 @@
 ## Usage
 
 * First, you need to install xelatex.
-* Then, type `make` to ensure no errors.
+* Then, type
+* `git clone https://github.com/c62066206/thesis.git`
+* `cd thesis`
+* `make`
+* Make sure there are no error messages.
 * Now, you can start to write your thesis
 
 
