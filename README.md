@@ -1,12 +1,19 @@
-# National Taiwan University Master Thesis - **xelatex** version
+# National Taiwan University Master Thesis - **xelatex**
 
+* 國立臺灣大學碩士論文(台大碩論)
 * origin version from: https://github.com/ychiaoli18/thesis.git
+* This is NTU master thesis for xelatex/xeCJK version 
 * Also fixed one typo in College name : replace "Enginnering" with "Engineering"
 
 ## Usage
 
 * First, you need to install xelatex.
-* Then, type `make` to ensure no errors.
+* Then, download ZIP in this page, or type:
+* `git clone https://github.com/c62066206/thesis.git`
+* `cd thesis`
+* `make`
+* Make sure there are no error messages.
+* You can see the output file `dist/thesis.pdf`
 * Now, you can start to write your thesis
 
 
@@ -48,4 +55,4 @@
 ## Murmur by me
 
 * The origin version (pdflatex) cannot show my name. I feel really sad ;(
-* If there are any bugs (format or whatever), feel free to tell me: r05942066@ntu.edu.tw
+* If there are any bugs (format or whatever), feel free to tell me: r05942066[AT]ntu.edu.tw
